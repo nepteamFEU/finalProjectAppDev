@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Shop - Add to Cart</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Shop Logo" />
+        </div>
+        <h1>Let's Get This Bread</h1>
+        <div class="cart">
+            <a href="cart.php"><img src="cart.png" alt="Cart Icon" /></a>
+            <span>Welcome, <span id="username">User</span></span>
+            <a href="logout.php">Logout</a>
+        </div>
+    </header>
+    
+    <main>
+        <div class="form-container">
+            <h2>Add to Cart</h2>
+            <form action="add_to_cart.php" method="post">
+                <label for="product">Product</label>
+                <select id="product" name="product" required>
+                    <option value="1" data-image="pandecoco.jpg">Pan De Coco - P50 (Pack)</option>
+                    <option value="2" data-image="pandesal.jpg">Pandesal - P20 (Bag)</option>
+                    <option value="3" data-image="garlic.jpg">Garlic Bread - P80 (Pack/Bag)</option>
+                    <option value="4" data-image="sour.jpg">Sourdough Bread - P200</option>
+                    <option value="5" data-image="ens.jpg">Ensaymada - P300 (Box)</option>
+                </select>
+
+                <div class="image-container">
+                    <img id="product-image" src="pandecoco.jpg" alt="Product Image" width="200" />
+                </div>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        const productSelect = document.getElementById('product');
+        const productImage = document.getElementById('product-image');
+
+        productSelect.addEventListener('change', function() {
+            const selectedOption = this.options[this.selectedIndex];
+            const imageUrl = selectedOption.getAttribute('data-image');
+            productImage.src = imageUrl;
+        });
+    </script>
+</body>
+</html>

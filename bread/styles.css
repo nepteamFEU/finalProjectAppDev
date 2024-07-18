@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f0e4d7, #d4c2a2);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 20px;
+    border-bottom: 1px solid #ccc;
+    height: auto;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 50px;
+    color: red;
+    font-family: 'Dancing Script', cursive;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+}
+
+.cart img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.cart span {
+    margin-right: 10px;
+    color: red;
+    font-family: 'Dancing Script', cursive;
+}
+
+.cart a {
+    text-decoration: none;
+    color: red;
+    font-family: 'Dancing Script', cursive;
+    margin-left: 10px;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+}
+
+.image-container img {
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+.wiggle {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.shop-name h2 {
+    margin: 20px 0;
+    font-size: 50px;
+    color: red;
+    font-family: 'Dancing Script', cursive;
+}
+
+.shop-button {
+    margin-top: 20px;
+}
+
+.shop-button button {
+    padding: 10px 20px;
+    font-size: 30px;
+    color: #fff;
+    background-color: #DAA520;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.shop-button button:hover {
+    background-color: #DAA520;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Shop - Purchased</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Shop Logo" />
+        </div>
+        <h1>Let's Get This Bread</h1>
+        <div class="cart">
+            <a href="cart.php"><img src="cart.png" alt="Cart Icon" /></a>
+            <span>Welcome, <span id="username">User</span></span>
+            <a href="logout.php">Logout</a>
+        </div>
+    </header>
+    
+    <main>
+        <div class="purchased-container">
+            <h2>Purchase Successful</h2>
+            <p>Thank you for your purchase!</p>
+            <div class="products-list">
+                <h3>Items Purchased:</h3>
+                <ul>
+                    <li>Pan De Coco - P50 (Pack)</li>
+                    <li>Pandesal - P20 (Bag)</li>
+                    <!-- Add more items dynamically if needed -->
+                </ul>
+            </div>
+            <p>Total Amount: PXX.XX</p> <!-- Replace with actual total amount -->
+            <form action="products.html">
+                <button type="submit" class="continue-shopping">Continue Shopping</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
